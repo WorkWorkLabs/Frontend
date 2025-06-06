@@ -1,0 +1,150 @@
+{
+  "nav": {
+    "jobs": "Empleos",
+    "services": "Servicios",
+    "visa": "Visados",
+    "learn": "Aprendizaje",
+    "resources": "Recursos",
+    "merchandise": "Tienda",
+    "about": "Nosotros"
+  },
+  "cta": {
+    "browseJobs": "Explorar Empleos",
+    "exploreServices": "Explorar Servicios",
+    "getStarted": "Comenzar",
+    "learnMore": "Más Información",
+    "contactUs": "Contáctenos"
+  },
+  "home": {
+    "hero": {
+      "title": "Trabajo y Vida para Nómadas Digitales",
+      "subtitle": "Plataforma integral para profesionales de Web3 y nómadas digitales",
+      "stats": "Empoderando a más de 2,500 nómadas digitales en todo el mundo"
+    },
+    "services": {
+      "title": "Nuestros Servicios",
+      "jobs": {
+        "title": "Bolsa de Trabajo",
+        "description": "Descubre oportunidades remotas en Web3 y más allá"
+      },
+      "life": {
+        "title": "Servicios de Vida",
+        "description": "Soluciones de pago, comida, viaje y alojamiento"
+      },
+      "visa": {
+        "title": "Servicios de Visado",
+        "description": "Navega por los requisitos de visado de más de 10 países"
+      },
+      "learn": {
+        "title": "Centro de Aprendizaje",
+        "description": "Mejora tus habilidades con cursos adaptados a trabajos demandados"
+      }
+    },
+    "community": {
+      "title": "Únete a Nuestra Comunidad",
+      "description": "Conéctate con otros nómadas digitales a través de nuestros canales de Telegram"
+    }
+  },
+  "jobs": {
+    "title": "Encuentra Tu Próxima Oportunidad Remota",
+    "search": "Buscar empleos...",
+    "filters": {
+      "category": "Categoría",
+      "location": "Ubicación",
+      "remote": "Solo Remoto"
+    },
+    "categories": {
+      "development": "Desarrollo",
+      "design": "Diseño",
+      "marketing": "Marketing",
+      "web3": "Web3",
+      "other": "Otros"
+    },
+    "services": {
+      "consultation": "Consulta de Carrera",
+      "upskilling": "Desarrollo de Habilidades",
+      "referrals": "Referencias Web3",
+      "community": "Centro Comunitario"
+    }
+  },
+  "services": {
+    "title": "Servicios de Vida para Nómadas Digitales",
+    "payment": {
+      "title": "Soluciones de Pago",
+      "description": "Múltiples opciones de pago, incluida criptomoneda"
+    },
+    "dining": {
+      "title": "Restaurantes",
+      "description": "Restaurantes asociados con descuentos para nómadas"
+    },
+    "travel": {
+      "title": "Viajes",
+      "description": "Ofertas de transporte y guías de viaje"
+    },
+    "accommodation": {
+      "title": "Alojamiento",
+      "description": "Opciones de alojamiento amigables para nómadas digitales"
+    },
+    "merchandise": {
+      "title": "Mercancía",
+      "description": "Equipo para nómadas digitales y productos de marca"
+    }
+  },
+  "visa": {
+    "title": "Servicios de Visado",
+    "matcher": {
+      "title": "Herramienta de Coincidencia de Visado",
+      "description": "Encuentra el visado adecuado para tu situación"
+    },
+    "database": {
+      "title": "Base de Datos de Visados",
+      "description": "Información completa para más de 10 países"
+    }
+  },
+  "learn": {
+    "title": "Centro de Aprendizaje",
+    "courses": {
+      "title": "Cursos Recomendados",
+      "description": "Mejora con cursos alineados a las demandas del mercado laboral"
+    },
+    "paths": {
+      "title": "Rutas de Aprendizaje",
+      "description": "Trayectorias educativas impulsadas por la comunidad"
+    },
+    "groups": {
+      "title": "Grupos de Estudio",
+      "description": "Únete a comunidades de aprendizaje en Telegram"
+    }
+  },
+  "resources": {
+    "title": "Centro de Recursos",
+    "guides": {
+      "title": "Guías para Nómadas Digitales",
+      "description": "Recursos creados por la comunidad para la vida nómada"
+    },
+    "forum": {
+      "title": "Foro",
+      "description": "Comparte experiencias sobre diferentes temas"
+    }
+  },
+  "about": {
+    "title": "Acerca de WorkWork",
+    "mission": {
+      "title": "Nuestra Misión",
+      "description": "Conectar a nómadas digitales globalmente"
+    },
+    "contact": {
+      "title": "Contáctenos",
+      "telegram": "Telegram",
+      "email": "Correo electrónico"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 WorkWork. Todos los derechos reservados.",
+    "links": {
+      "terms": "Términos",
+      "privacy": "Privacidad",
+      "cookies": "Cookies"
+    }
+  }
+}
