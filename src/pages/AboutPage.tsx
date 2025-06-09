@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Globe, MessageCircle, Mail, ArrowRight } from 'lucide-react';
 import HeroSection from '../components/common/HeroSection';
+import yanboImg from '../assets/workwork.jpg';
 
 const AboutPage = () => {
   const { t } = useTranslation();
@@ -37,7 +38,7 @@ const AboutPage = () => {
     {
       name: 'Yanbo',
       role: 'Founder',
-      image: require('../assets/燚波.png'),
+      image: yanboImg,
       bio: '20 yo. digital nomad, former public chain and wallet developer relations.'
     }
   ];
