@@ -192,12 +192,12 @@ const AboutPage = () => {
                         <p className="text-gray-600">
                           Join our main channel:
                           <a 
-                            href="https://t.me/workwork" 
+                            href="https://t.me/workworkweb3" 
                             className="text-primary-600 hover:text-primary-700 ml-1"
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            @workwork
+                            @https://t.me/workworkweb3
                           </a>
                         </p>
                       </div>
@@ -210,19 +210,19 @@ const AboutPage = () => {
                         <p className="text-gray-600">
                           General inquiries: 
                           <a 
-                            href="mailto:hello@workwork.xyz" 
+                            href="mailto:contact@work-work.org" 
                             className="text-primary-600 hover:text-primary-700 ml-1"
                           >
-                            hello@workwork.xyz
+                            contact@work-work.org
                           </a>
                         </p>
                         <p className="text-gray-600">
                           Partnership opportunities: 
                           <a 
-                            href="mailto:partners@workwork.xyz" 
+                            href="mailto:partners@workwork.org" 
                             className="text-primary-600 hover:text-primary-700 ml-1"
                           >
-                            partners@workwork.xyz
+                            partners@workwork.org
                           </a>
                         </p>
                       </div>
