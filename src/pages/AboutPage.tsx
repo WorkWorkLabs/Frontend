@@ -35,22 +35,10 @@ const AboutPage = () => {
 
   const team = [
     {
-      name: 'Alex Chen',
-      role: 'Founder & CEO',
-      image: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      bio: 'Former Web3 developer turned digital nomad, with a passion for connecting professionals across borders.'
-    },
-    {
-      name: 'Sophia Rodriguez',
-      role: 'Head of Community',
-      image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      bio: 'Community builder with 5+ years experience in cultivating thriving digital spaces for remote professionals.'
-    },
-    {
-      name: 'Marcus Johnson',
-      role: 'CTO',
-      image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      bio: 'Blockchain developer and digital nomad advocate, building technology that enables location-independent work.'
+      name: 'Yanbo',
+      role: 'Founder',
+      image: require('../assets/燚波.png'),
+      bio: '20 yo. digital nomad, former public chain and wallet developer relations.'
     }
   ];
 

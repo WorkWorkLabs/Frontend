@@ -57,7 +57,7 @@ const Header = () => {
       <div className="container-custom flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
-          <img src="/logo.svg" alt="WorkWork Logo" className="h-8 w-8" />
+          <img src={require('../../assets/workwork.pic.jpg')} alt="WorkWork Logo" className="h-8 w-8" />
           <span className="font-bold text-xl text-primary-800">
             Work<span className="text-secondary-600">Work</span>
           </span>
