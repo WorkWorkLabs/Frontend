@@ -42,7 +42,8 @@
     },
     "community": {
       "title": "加入我们的社区",
-      "description": "通过Telegram频道与其他数字游民连接"
+      "description": "通过Telegram频道与其他数字游民连接",
+      "joinButton": "加入社群"
     }
   },
   "jobs": {

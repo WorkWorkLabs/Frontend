@@ -71,6 +71,14 @@ const HomePage = () => {
           <Link to="/services" className="btn-outline bg-white/10 border-white/30 text-white hover:bg-white/20">
             {t('cta.exploreServices')}
           </Link>
+          <a 
+            href="https://t.me/WorkWorkWeb3/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn-outline bg-white/10 border-white/30 text-white hover:bg-white/20"
+          >
+            {t('home.community.joinButton')}
+          </a>
         </div>
         <p className="mt-8 text-white/80 font-medium">{t('home.hero.stats')}</p>
       </HeroSection>

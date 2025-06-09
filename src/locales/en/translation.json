@@ -42,7 +42,8 @@
     },
     "community": {
       "title": "Join Our Community",
-      "description": "Connect with fellow digital nomads through our Telegram channels"
+      "description": "Connect with fellow digital nomads through our Telegram channels",
+      "joinButton": "Join Community"
     }
   },
   "jobs": {
