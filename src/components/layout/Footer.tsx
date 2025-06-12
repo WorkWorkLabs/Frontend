@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { Language } from '../../types';
 import { changeLanguage } from '../../i18n';
 import workworkLogo from '../../assets/workwork.jpg';
+import TypewriterText from '../common/TypewriterText';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -19,6 +20,12 @@ const Footer = () => {
     { code: 'en', label: 'English' },
     { code: 'zh', label: '中文' },
     { code: 'es', label: 'Español' },
+  ];
+
+  const typewriterPhrases = [
+    t('footer.typewriter.phrase1'),
+    t('footer.typewriter.phrase2'),
+    t('footer.typewriter.phrase3')
   ];
 
   const footerLinks = [
@@ -72,9 +79,9 @@ const Footer = () => {
                 Work<span className="text-secondary-400">Work</span>
               </span>
             </div>
-            <p className="text-gray-400 mb-4">
-              One-stop platform for Web3 professionals and digital nomads.
-            </p>
+            <div className="text-gray-400 mb-4">
+              <TypewriterText phrases={typewriterPhrases} className="text-gray-400" />
+            </div>
             <div className="flex space-x-4 text-gray-400">
               <a 
                 href="https://t.me/workwork" 
