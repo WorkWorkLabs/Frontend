@@ -5,9 +5,16 @@ import { Briefcase as BriefcaseBusiness, Plane, Import as Passport, GraduationCa
 import ServiceCard from '../components/common/ServiceCard';
 import Testimonial from '../components/common/Testimonial';
 import HeroSection from '../components/common/HeroSection';
+import TypewriterText from '../components/common/TypewriterText';
 
 const HomePage = () => {
   const { t } = useTranslation();
+
+  const typewriterPhrases = [
+    t('home.typewriter.phrase1'),
+    t('home.typewriter.phrase2'),
+    t('home.typewriter.phrase3')
+  ];
 
   const services = [
     { 
@@ -62,7 +69,12 @@ const HomePage = () => {
       {/* Hero Section */}
       <HeroSection
         title={t('home.hero.title')}
-        subtitle={t('home.hero.subtitle')}
+        subtitle={
+          <TypewriterText 
+            phrases={typewriterPhrases} 
+            className="text-xl md:text-2xl text-white/90 font-medium"
+          />
+        }
       >
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Link to="/jobs" className="btn-primary">
