@@ -4,7 +4,7 @@ import { MessageCircle, Mail, Globe, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 import { Language } from '../../types';
 import { changeLanguage } from '../../i18n';
-import workworkLogo from '../../assets/workwork.jpg';
+import logo from '../../assets/logo.svg';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -67,7 +67,7 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <img src={workworkLogo} alt="WorkWork Logo" className="h-8 w-8 filter invert" />
+              <img src={logo} alt="WorkWork Logo" className="h-8 w-8 filter invert" />
               <span className="font-bold text-xl">
                 Work<span className="text-secondary-400">Work</span>
               </span>
