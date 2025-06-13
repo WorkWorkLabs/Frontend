@@ -62,13 +62,16 @@ const AboutPage = () => {
             >
               <h2 className="text-3xl font-bold mb-6 text-gray-900">{t('about.mission.title')}</h2>
               <p className="text-gray-600 text-lg mb-6">
-                {t('about.mission.description')}. WorkWork was born from a simple idea: 
-                to create a platform that serves the unique needs of digital nomads and Web3 professionals.
+                WorkWork 最开始设计的想法源于狼在对着蓝天嚎叫"Wolf-Wolf"的意象，象征数字游民在自由旷野中寻找归属与价值的冲动。
               </p>
               <p className="text-gray-600 mb-8">
-                Our mission is to enable location-independent work and living by providing essential services and resources. 
-                We believe that work should adapt to life, not the other way around. Through our job board, life services, 
-                visa support, and learning resources, we aim to make the digital nomad lifestyle accessible to everyone.
+                WorkWork 的核心理念是赋予数字游民无限可能。
+                不仅是平台，更是数字游牧的"草原"，连接全球"狼魂"，共创无限可能。
+                无论你是远程工作者、自由职业者还是创业者，WorkWork 提供开放生态，链接创意与机会。
+                你可与伙伴协作项目，参与社区活动与工作坊，激发创新火花。
+                不同于传统办公，WorkWork 打破时空限制，打造全方位服务：如招聘求职，生活服务，签证服务，学习中心，资源中心，周边购买。
+                我们的愿景是构建无边界的工作生活共同体，每声"Work-Work"召唤游民奔向自由与归属的未来。
+                加入 WorkWork，成为"狼群"一员，在数字草原释放野性，找到归属！
               </p>
               
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
