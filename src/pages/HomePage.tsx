@@ -69,12 +69,7 @@ const HomePage = () => {
       {/* Hero Section */}
       <HeroSection
         title={t('home.hero.title')}
-        subtitle={
-          <TypewriterText 
-            phrases={typewriterPhrases} 
-            className="text-xl md:text-2xl text-white/90 font-medium"
-          />
-        }
+        subtitle={t('home.hero.subtitle')}
       >
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Link to="/jobs" className="btn-primary">
