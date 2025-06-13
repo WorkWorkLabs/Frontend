@@ -35,6 +35,7 @@ const Header = () => {
 
   const navLinks = [
     { path: '/jobs', label: t('nav.jobs') },
+    { path: '/destinations', label: t('nav.destinations') },
     { path: '/services', label: t('nav.services') },
     { path: '/visa', label: t('nav.visa') },
     { path: '/learn', label: t('nav.learn') },

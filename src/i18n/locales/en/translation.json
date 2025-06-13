@@ -12,5 +12,66 @@
       "phrase2": "Work everywhere, WorkWork.",
       "phrase3": "Finding belonging and value in the free wilderness."
     }
+  },
+  "nav": {
+    "jobs": "Jobs",
+    "destinations": "Destinations",
+    "services": "Services",
+    "visa": "Visa",
+    "learn": "Learn",
+    "resources": "Resources",
+    "merchandise": "Merchandise",
+    "about": "About"
+  },
+  "cta": {
+    "getStarted": "Get Started",
+    "browseJobs": "Browse Jobs",
+    "exploreServices": "Explore Services",
+    "learnMore": "Learn More"
+  },
+  "home": {
+    "hero": {
+      "title": "Your Gateway to the Digital Nomad Lifestyle",
+      "subtitle": "Connect, Work, and Thrive in the Web3 Era",
+      "stats": "Join 2,500+ digital nomads and Web3 professionals"
+    },
+    "typewriter": {
+      "phrase1": "One-stop platform for Web3 professionals and digital nomads.",
+      "phrase2": "Work everywhere, WorkWork.",
+      "phrase3": "Finding belonging and value in the free wilderness."
+    },
+    "services": {
+      "title": "Our Services",
+      "jobs": {
+        "title": "Job Board",
+        "description": "Find remote Web3 jobs that match your skills and lifestyle"
+      },
+      "life": {
+        "title": "Life Services",
+        "description": "Essential services for digital nomads: payments, dining, travel"
+      },
+      "visa": {
+        "title": "Visa Support",
+        "description": "Navigate visa requirements and find the best options"
+      },
+      "learn": {
+        "title": "Learning",
+        "description": "Access courses and resources to enhance your skills"
+      }
+    },
+    "community": {
+      "title": "Join Our Community",
+      "description": "Connect with fellow digital nomads and Web3 professionals",
+      "joinButton": "Join Community"
+    }
+  },
+  "footer": {
+    "description": "One-stop platform for Web3 professionals and digital nomads.",
+    "copyright": "© 2024 WorkWork. All rights reserved.",
+    "links": {
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "cookies": "Cookie Policy"
+    }
   }
 } 

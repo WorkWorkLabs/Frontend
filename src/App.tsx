@@ -9,6 +9,7 @@ import LearnPage from './pages/LearnPage';
 import ResourcesPage from './pages/ResourcesPage';
 import MerchandisePage from './pages/MerchandisePage';
 import AboutPage from './pages/AboutPage';
+import './i18n';
 
 function App() {
   const location = useLocation();
