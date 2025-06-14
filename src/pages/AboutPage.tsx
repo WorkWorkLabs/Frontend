@@ -161,10 +161,15 @@ const AboutPage = () => {
                   <h3 className="text-xl font-semibold mb-1 text-gray-900">{member.name}</h3>
                   <p className="text-primary-600 font-medium mb-3">{member.role}</p>
                   <p className="text-gray-600 mb-4">{member.bio}</p>
-                  <button className="text-primary-600 hover:text-primary-700 font-medium inline-flex items-center">
+                  <a 
+                    href="https://bonjour.bio/yanbo" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary-600 hover:text-primary-700 font-medium inline-flex items-center"
+                  >
                     Connect
                     <ArrowRight size={16} className="ml-1" />
-                  </button>
+                  </a>
                 </div>
               </motion.div>
             ))}
