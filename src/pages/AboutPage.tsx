@@ -42,16 +42,16 @@ const AboutPage = () => {
       bio: '20 yo. digital nomad, former public chain and wallet developer relations.'
     },
     {
-      name: 'Sarah Chen',
-      role: 'Community Lead',
-      image: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      bio: 'Passionate about building inclusive digital nomad communities and organizing global meetups.'
+      name: 'Anna Chen',
+      role: 'Co-Founder & Marketing',
+      image: yanboImg,
+      bio: 'Digital marketing expert with a passion for building global communities. Specializing in growth strategies and brand development for Web3 projects.'
     },
     {
-      name: 'Miguel Rodriguez',
-      role: 'Tech Lead',
-      image: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-      bio: 'Full-stack developer with expertise in Web3 technologies and remote team management.'
+      name: 'Morty',
+      role: 'Co-Founder & Tech',
+      image: yanboImg,
+      bio: 'Blockchain developer and tech innovator. Focused on creating scalable solutions for the digital nomad community and Web3 ecosystem.'
     }
   ];
 
