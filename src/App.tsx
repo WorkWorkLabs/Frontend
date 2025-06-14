@@ -9,6 +9,7 @@ import LearnPage from './pages/LearnPage';
 import ResourcesPage from './pages/ResourcesPage';
 import MerchandisePage from './pages/MerchandisePage';
 import AboutPage from './pages/AboutPage';
+import DestinationPage from './pages/DestinationPage';
 import './i18n';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       '/resources': 'Resources | WorkWork',
       '/merchandise': 'Store | WorkWork',
       '/about': 'About Us | WorkWork',
+      '/destinations': 'Destinations | WorkWork',
     };
     
     document.title = pageTitles[location.pathname] || pageTitles['/'];
@@ -41,6 +43,7 @@ function App() {
         <Route path="/resources" element={<ResourcesPage />} />
         <Route path="/merchandise" element={<MerchandisePage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/destinations" element={<DestinationPage />} />
       </Routes>
     </Layout>
   );

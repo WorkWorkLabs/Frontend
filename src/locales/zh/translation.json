@@ -6,7 +6,8 @@
     "learn": "学习中心",
     "resources": "资源中心",
     "merchandise": "周边购买",
-    "about": "关于我们"
+    "about": "关于我们",
+    "destinations": "目的地"
   },
   "cta": {
     "browseJobs": "浏览职位",
@@ -147,5 +148,9 @@
       "privacy": "隐私",
       "cookies": "Cookie"
     }
+  },
+  "destinations": {
+    "title": "数字游民目的地",
+    "description": "探索适合数字游民工作和生活的目的地，找到属于你的理想空间。我们收集了全国各地的数字游民友好空间，包括联合办公、社区空间、文化场所等。"
   }
 }

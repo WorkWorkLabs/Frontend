@@ -40,6 +40,7 @@ const Header = () => {
     { path: '/learn', label: t('nav.learn') },
     { path: '/resources', label: t('nav.resources') },
     { path: '/merchandise', label: t('nav.merchandise') },
+    { path: '/destinations', label: t('nav.destinations') },
     { path: '/about', label: t('nav.about') },
   ];
 
