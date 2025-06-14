@@ -73,7 +73,7 @@ export const destinations: Destination[] = [
     name: "临时公园",
     city: "上海",
     tags: ["艺术空间", "社区"],
-    description: "临时公园是一个性别友好创造性社群空间，由流动/艺术家（及"其它"）青年及青少年自主共治。",
+    description: "临时公园是一个性别友好创造性社群空间，由流动/艺术家（及其他）青年及青少年自主共治。",
     location: "上海市浦东新区"
   },
   {
