@@ -1,5 +1,5 @@
 <template>
-  <div class="app-logo">
+  <div class="app-logo" :data-size="size" :data-variant="variant">
     <div class="logo-content">
       <!-- Logo Icon -->
       <div class="logo-icon">
@@ -57,20 +57,20 @@ withDefaults(defineProps<Props>(), {
 }
 
 /* Size variants */
-.app-logo[data-size="sm"] .logo-svg {
+.app-logo[data-size="sm"] .logo-image {
   @apply w-6 h-6;
 }
 
-.app-logo[data-size="sm"] .logo-main {
-  @apply text-lg;
+.app-logo[data-size="sm"] .brand-name {
+  @apply h-5;
 }
 
-.app-logo[data-size="lg"] .logo-svg {
+.app-logo[data-size="lg"] .logo-image {
   @apply w-10 h-10;
 }
 
-.app-logo[data-size="lg"] .logo-main {
-  @apply text-2xl;
+.app-logo[data-size="lg"] .brand-name {
+  @apply h-8;
 }
 
 /* Dark variant */
