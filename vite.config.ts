@@ -4,7 +4,6 @@ import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [vue()],
-  base: '/Frontend/',  // 仓库名称
   server: {
     port: 3000,
     host: true
@@ -17,7 +16,7 @@ export default defineConfig({
   build: {
     target: 'esnext',
     minify: 'esbuild',
-    outDir: 'docs',  // 输出到docs目录
+    outDir: 'dist',
     rollupOptions: {
       output: {
         manualChunks: {
