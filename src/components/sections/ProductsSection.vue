@@ -7,15 +7,40 @@
           WorkWork connect users with socially meaningful opportunities
         </p>
         
-        <div class="carousel-container">
-          <div class="carousel-track" :style="{ transform: `translateX(-${currentIndex * 50}%)` }">
-            <div class="product-slide">
-              <img src="/images/mastercard.svg" alt="Mastercard Product" />
-            </div>
-            <div class="product-slide">
-              <img src="/images/growthos.svg" alt="Growth OS Product" />
+        <div class="carousel-container" v-if="products.length > 0">
+          <div 
+            class="carousel-track" 
+            :style="{ 
+              transform: `translateX(-${currentIndex * (100 / products.length)}%)`,
+              width: `${products.length * 100}%`
+            }"
+          >
+            <div 
+              v-for="product in products" 
+              :key="product.id"
+              class="product-slide"
+              :style="{ width: `${100 / products.length}%` }"
+            >
+              <img 
+                :src="product.image || '/images/placeholder.svg'" 
+                :alt="product.title" 
+              />
             </div>
           </div>
+        </div>
+        
+        <!-- 指示条 - 只有多于1张图片时才显示 -->
+        <div 
+          v-if="products.length > 1" 
+          class="carousel-indicators"
+        >
+          <button
+            v-for="(product, index) in products"
+            :key="product.id"
+            :class="['indicator', { active: currentIndex === index }]"
+            @click="goToSlide(index)"
+            :aria-label="`Go to ${product.title}`"
+          ></button>
         </div>
       </div>
     </div>
@@ -23,24 +48,57 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
+import { storeToRefs } from 'pinia'
+import { useContentStore } from '@/stores/content'
+
+const contentStore = useContentStore()
+const { products } = storeToRefs(contentStore)
 
 const currentIndex = ref(0)
-const totalSlides = 2
 let intervalId: number | null = null
 
+// 动态计算总张数
+const totalSlides = computed(() => products.value.length)
+
 const nextSlide = () => {
-  currentIndex.value = (currentIndex.value + 1) % totalSlides
+  if (totalSlides.value > 1) {
+    currentIndex.value = (currentIndex.value + 1) % totalSlides.value
+  }
 }
 
-onMounted(() => {
-  intervalId = setInterval(nextSlide, 3000) // 3秒切换一次
-})
-
-onUnmounted(() => {
+const goToSlide = (index: number) => {
+  currentIndex.value = index
+  // 重置自动轮播
   if (intervalId) {
     clearInterval(intervalId)
   }
+  // 只有多于1张图片时才自动轮播
+  if (totalSlides.value > 1) {
+    intervalId = setInterval(nextSlide, 3000)
+  }
+}
+
+const startAutoPlay = () => {
+  // 只有多于1张图片时才启动自动轮播
+  if (totalSlides.value > 1) {
+    intervalId = setInterval(nextSlide, 3000)
+  }
+}
+
+const stopAutoPlay = () => {
+  if (intervalId) {
+    clearInterval(intervalId)
+    intervalId = null
+  }
+}
+
+onMounted(() => {
+  startAutoPlay()
+})
+
+onUnmounted(() => {
+  stopAutoPlay()
 })
 </script>
 
@@ -74,13 +132,11 @@ onUnmounted(() => {
 
 .carousel-track {
   display: flex;
-  width: 200%; /* 2张图片，所以是200% */
   height: 100%;
   transition: transform 0.5s ease-in-out;
 }
 
 .product-slide {
-  width: 50%; /* 每张图片占50% */
   height: 100%;
   flex-shrink: 0;
 }
@@ -106,6 +162,40 @@ onUnmounted(() => {
     width: 95vw;
     height: calc(95vw * 500 / 1000);
   }
+}
+
+/* 指示条样式 */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background-color: #d1d5db;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.indicator:hover {
+  background-color: #9ca3af;
+  transform: scale(1.1);
+}
+
+.indicator.active {
+  background-color: #00A1FF;
+  transform: scale(1.2);
+}
+
+.indicator:focus {
+  outline: 2px solid #00A1FF;
+  outline-offset: 2px;
 }
 
 .text-primary {

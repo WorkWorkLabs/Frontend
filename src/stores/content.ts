@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
-import type { NavItem, Feature, Product, TeamMember, Stat } from '@/types'
+import type { NavItem, Feature, Product, TeamMember, Stat, Review } from '@/types'
 
 export const useContentStore = defineStore('content', () => {
   // Navigation
@@ -43,7 +43,20 @@ export const useContentStore = defineStore('content', () => {
     }
   ])
 
-  // Products
+  // Products - 轮播图配置
+  // 🎨 用户可以随意增减图片，无需修改代码！
+  // 📁 图片存放位置：public/images/ 文件夹
+  // 🔗 引用格式：'/images/your-image.svg'
+  // 
+  // 📝 使用方法：
+  //   1. 将图片文件放到 public/images/ 文件夹
+  //   2. 在下面数组中添加/删除/修改产品对象
+  //   3. 设置 image 字段为图片路径（如：'/images/new-product.svg'）
+  //   
+  // ✨ 特性：
+  //   - 图片数量：支持1张到无限张，自动适配
+  //   - 自动轮播：只有多于1张图时才启动
+  //   - 指示条：自动显示对应数量的指示点
   const products = ref<Product[]>([
     {
       id: '1',
@@ -55,7 +68,8 @@ export const useContentStore = defineStore('content', () => {
         { label: 'Fees as low as', value: '0.1%', highlight: true }
       ],
       link: '#card',
-      tags: []
+      tags: [],
+      image: '/images/mastercard.svg'
     },
     {
       id: '2',
@@ -64,7 +78,8 @@ export const useContentStore = defineStore('content', () => {
       description: 'A one-stop platform for Web3 professionals and digital nomads，The work and life of digital nomads',
       features: [],
       link: '#platform',
-      tags: ['Free job postings', 'Community-driven', 'Web3 focus', 'Remote-first']
+      tags: ['Free job postings', 'Community-driven', 'Web3 focus', 'Remote-first'],
+      image: '/images/growthos.svg'
     },
     {
       id: '3',
@@ -73,7 +88,18 @@ export const useContentStore = defineStore('content', () => {
       description: 'GrowthOS is the world\'s first Web3 operating system for digital nomads and super individuals, empowering digital creators and remote workers in the AI Agent era.',
       features: [],
       link: '#growth-os',
-      tags: ['Create', 'cooperation', 'Trade']
+      tags: ['Create', 'cooperation', 'Trade'],
+      image: '/images/mastercard.svg'
+    },
+    {
+      id: '4',
+      title: 'Community Platform',
+      subtitle: 'WorkWork Community',
+      description: 'Connect with digital nomads worldwide and build meaningful professional relationships.',
+      features: [],
+      link: '#community',
+      tags: ['Community', 'Networking', 'Global'],
+      image: '/images/growthos.svg'
     }
   ])
 
@@ -127,7 +153,39 @@ export const useContentStore = defineStore('content', () => {
     { id: '2', number: '3200', label: 'Stars telegram', icon: '/images/tg-icon.png' }
   ])
 
-  // Testimonial
+  // Reviews - 评价轮播图配置
+  // 🎨 用户可以随意增减评价图片，无需修改代码！
+  // 📁 图片存放位置：public/images/ 文件夹
+  // 🔗 引用格式：'/images/review-name.svg'
+  const reviews = ref<Review[]>([
+    {
+      id: '1',
+      image: '/images/review1.svg',
+      alt: 'Digital Nomad Review 1'
+    },
+    {
+      id: '2', 
+      image: '/images/review2.svg',
+      alt: 'Digital Nomad Review 2'
+    },
+    {
+      id: '3',
+      image: '/images/review1.svg', // 复用第一张作为演示
+      alt: 'Digital Nomad Review 3'
+    },
+    {
+      id: '4',
+      image: '/images/review2.svg', // 复用第二张作为演示  
+      alt: 'Digital Nomad Review 4'
+    },
+    {
+      id: '5',
+      image: '/images/review1.svg', // 复用第一张作为演示
+      alt: 'Digital Nomad Review 5'
+    }
+  ])
+
+  // Testimonial (保留原有的单个评价配置)
   const testimonial = ref({
     quote: 'Work everywhere, Work everytime',
     text: 'WorkWork has been essential for my digital nomad journey, helping me find Web3 jobs while navigating visa requirements across Asia.',
@@ -144,6 +202,7 @@ export const useContentStore = defineStore('content', () => {
     products,
     team,
     stats,
+    reviews,
     testimonial
   }
 })

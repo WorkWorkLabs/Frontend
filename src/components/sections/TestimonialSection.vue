@@ -9,18 +9,37 @@
           foundation of a global collaborative community.
         </p>
 
-        <div class="carousel-container">
+        <div class="carousel-container" v-if="reviews.length > 0">
           <div
             class="carousel-track"
-            :style="{ transform: `translateX(-${currentIndex * 50}%)` }"
+            :style="{ 
+              transform: `translateX(-${currentIndex * (100 / reviews.length)}%)`,
+              width: `${reviews.length * 100}%`
+            }"
           >
-            <div class="review-slide">
-              <img src="/images/review1.svg" alt="Review 1" />
-            </div>
-            <div class="review-slide">
-              <img src="/images/review2.svg" alt="Review 2" />
+            <div 
+              v-for="review in reviews"
+              :key="review.id"
+              class="review-slide"
+              :style="{ width: `${100 / reviews.length}%` }"
+            >
+              <img :src="review.image" :alt="review.alt" />
             </div>
           </div>
+        </div>
+        
+        <!-- 指示条 - 只有多于1张图片时才显示 -->
+        <div 
+          v-if="reviews.length > 1"
+          class="carousel-indicators"
+        >
+          <button
+            v-for="(review, index) in reviews"
+            :key="review.id"
+            :class="['indicator', { active: currentIndex === index }]"
+            @click="goToSlide(index)"
+            :aria-label="`Go to review ${index + 1}`"
+          ></button>
         </div>
       </div>
     </div>
@@ -28,24 +47,57 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted, computed } from "vue";
+import { storeToRefs } from 'pinia'
+import { useContentStore } from '@/stores/content'
+
+const contentStore = useContentStore()
+const { reviews } = storeToRefs(contentStore)
 
 const currentIndex = ref(0);
-const totalSlides = 2;
 let intervalId: number | null = null;
 
+// 动态计算总张数
+const totalSlides = computed(() => reviews.value.length)
+
 const nextSlide = () => {
-  currentIndex.value = (currentIndex.value + 1) % totalSlides;
+  if (totalSlides.value > 1) {
+    currentIndex.value = (currentIndex.value + 1) % totalSlides.value;
+  }
 };
 
-onMounted(() => {
-  intervalId = setInterval(nextSlide, 3000); // 3秒切换一次
-});
-
-onUnmounted(() => {
+const goToSlide = (index: number) => {
+  currentIndex.value = index;
+  // 重置自动轮播
   if (intervalId) {
     clearInterval(intervalId);
   }
+  // 只有多于1张图片时才自动轮播
+  if (totalSlides.value > 1) {
+    intervalId = setInterval(nextSlide, 3000);
+  }
+};
+
+const startAutoPlay = () => {
+  // 只有多于1张图片时才启动自动轮播
+  if (totalSlides.value > 1) {
+    intervalId = setInterval(nextSlide, 3000);
+  }
+}
+
+const stopAutoPlay = () => {
+  if (intervalId) {
+    clearInterval(intervalId);
+    intervalId = null;
+  }
+}
+
+onMounted(() => {
+  startAutoPlay();
+});
+
+onUnmounted(() => {
+  stopAutoPlay();
 });
 </script>
 
@@ -79,13 +131,11 @@ onUnmounted(() => {
 
 .carousel-track {
   display: flex;
-  width: 200%; /* 2张图片，所以是200% */
   height: 100%;
   transition: transform 0.5s ease-in-out;
 }
 
 .review-slide {
-  width: 50%; /* 每张图片占50% */
   height: 100%;
   flex-shrink: 0;
 }
@@ -95,6 +145,40 @@ onUnmounted(() => {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+/* 指示条样式 */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background-color: #d1d5db;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.indicator:hover {
+  background-color: #9ca3af;
+  transform: scale(1.1);
+}
+
+.indicator.active {
+  background-color: #00a1ff;
+  transform: scale(1.2);
+}
+
+.indicator:focus {
+  outline: 2px solid #00a1ff;
+  outline-offset: 2px;
 }
 
 .text-primary {

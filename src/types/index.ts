@@ -32,6 +32,7 @@ export interface Product {
   features: ProductFeature[]
   link: string
   tags?: string[]
+  image?: string
 }
 
 export interface ProductFeature {
@@ -73,6 +74,13 @@ export interface ContactForm {
   email: string
   company?: string
   message: string
+}
+
+// 评价/评论类型
+export interface Review {
+  id: string
+  image: string
+  alt: string
 }
 
 // 应用配置类型
